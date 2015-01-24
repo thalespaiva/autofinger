@@ -26,9 +26,9 @@ class Note(object):
 
     def __str__(self):
         if self.hold:
-            return '(p) self.note'
+            return '(h)' + self.note
         else:
-            return '(h) self.note'
+            return '(p)' + self.note
 
     def is_a_black_key(self):
         return (self.pitch % Note.number_of_base_notes) in Note.base_black_keys
