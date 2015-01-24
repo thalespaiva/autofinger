@@ -302,7 +302,7 @@
                 <note hold="False">g4</note>
             </unit>
             <unit beats="7/2">
-                <note hold="False">b4</note>
+                <pause></pause>
             </unit>
 
         </bar>
