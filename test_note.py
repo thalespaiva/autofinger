@@ -6,7 +6,7 @@ import fractions
 import note
 
 
-class TestNote(unittest.TestCase):
+class NoteTest(unittest.TestCase):
 
     def test_pitch_of_f_sharp_4_is_46(self):
         self.assertEqual(note.Note.get_pitch('F#4'), 46)
