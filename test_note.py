@@ -28,8 +28,11 @@ class TestNote(unittest.TestCase):
         self.assertEqual(F_sharp_3.pitch, f_sharp_3.pitch)
         self.assertEqual(f_sharp_3.pitch, 34)
 
-    def test_distance_between_b1_and_g2_is_8(self):
-        pass
+    def test_distance_between_b1_and_g2_is_20(self):
+        b_1 = note.Note('b1', fractions.Fraction(1, 2))
+        g_2 = note.Note('g2', fractions.Fraction(1, 2))
+
+        self.assertEqual(note.Note.distance(b_1, g_2), 20)
 
 
 if __name__ == '__main__':

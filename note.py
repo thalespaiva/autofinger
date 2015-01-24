@@ -31,7 +31,7 @@ class Note(object):
         return (self.pitch % Note.number_of_base_notes) in Note.base_black_keys
 
     def distance(this_note, that_note):
-        return math.abs(this_note.pitch - that_note.pitch)
+        return abs(this_note.pitch - that_note.pitch)
 
     def get_pitch(str_note):
         try:
