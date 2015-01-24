@@ -18,12 +18,16 @@ class Note(object):
                        ('g', 11), ('g#', 12)])
     number_of_base_notes = len(base_notes)
 
-    def __init__(self, pitch):
+    def __init__(self, note):
         super(Note, self).__init__()
-        if (isinstance(pitch, str)):
-            self.pitch = Note.get_pitch(pitch)
-        elif (isinstance(pitch, int)):
-            self.pitch = pitch
+        if (isinstance(note, str)):
+            self.pitch = Note.get_pitch(note)
+            self.note = note
+        else:
+            raise TypeError
+
+    def __str__(self):
+        return self.note
 
     def is_a_black_key(self):
         return (self.pitch % Note.number_of_base_notes) in Note.base_black_keys
