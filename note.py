@@ -8,8 +8,6 @@ class Note(object):
             1 <-> A1
             2 <-> A#1
             3 <-> B1
-
-        duration is a Fraction
     """
 
     base_black_keys = [2, 5, 7, 10, 12]
