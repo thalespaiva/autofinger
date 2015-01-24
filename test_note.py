@@ -33,6 +33,11 @@ class NoteTest(unittest.TestCase):
 
         self.assertEqual(note.Note.distance(b_1, g_2), 20)
 
+    def test_random_note_is_valid(self):
+        r = note.Note.random_note()
+
+        self.assertIsInstance(r, note.Note)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -61,3 +61,11 @@ class Note(object):
 
     def key_pitch(note):
         return note.pitch
+
+    def random_note():
+        from random import choice
+
+        pitch = choice(list(Note.base_notes.keys()))
+        position = str(choice(range(1, 9)))
+
+        return Note(pitch + position)
