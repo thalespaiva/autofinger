@@ -25,3 +25,12 @@ class Unit(object):
         for n in self.notes:
             out += '%-8s' % str(n)
         return out
+
+    def random_unit():
+        from random import randrange
+        from fractions import Fraction
+
+        n_notes = randrange(1, 6, 1)
+        notes = [note.Note.random_note() for _ in range(n_notes)]
+
+        return Unit(notes, Fraction(1, 2))

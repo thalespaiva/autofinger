@@ -18,5 +18,10 @@ class UnitTest(unittest.TestCase):
         print(u)
         self.assertEqual(u.notes, [c_2, a_3, b_4])
 
+    def test_random_unit_is_valid(self):
+        r = unit.Unit.random_unit()
+
+        self.assertIsInstance(r, unit.Unit)
+
 if __name__ == "__main__":
     unittest.main()
