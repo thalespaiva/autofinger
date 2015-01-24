@@ -55,3 +55,6 @@ class Note(object):
 
         except Exception as e:
             raise e
+
+    def key_pitch(note):
+        return note.pitch
