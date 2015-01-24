@@ -3,11 +3,10 @@ import re
 
 class Note(object):
     """
-    Note:
-        pitch is one integer, where:
-            1 <-> A1
-            2 <-> A#1
-            3 <-> B1
+    pitch is one integer, where:
+        1 <-> A1
+        2 <-> A#1
+        3 <-> B1
     """
 
     base_black_keys = [2, 5, 7, 10, 12]
@@ -16,11 +15,12 @@ class Note(object):
                        ('g', 11), ('g#', 12)])
     number_of_base_notes = len(base_notes)
 
-    def __init__(self, note):
+    def __init__(self, note, hold=False):
         super(Note, self).__init__()
         if (isinstance(note, str)):
             self.pitch = Note.get_pitch(note)
             self.note = note
+            self.hold = hold
         else:
             raise TypeError
 
