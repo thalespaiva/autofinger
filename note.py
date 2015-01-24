@@ -25,7 +25,10 @@ class Note(object):
             raise TypeError
 
     def __str__(self):
-        return self.note
+        if self.hold:
+            return '(p) self.note'
+        else:
+            return '(h) self.note'
 
     def is_a_black_key(self):
         return (self.pitch % Note.number_of_base_notes) in Note.base_black_keys
