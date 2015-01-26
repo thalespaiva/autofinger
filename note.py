@@ -70,3 +70,10 @@ class Note(object):
         position = str(choice(range(1, 9)))
 
         return Note(pitch + position)
+
+    def init_notes(list_of_str_notes):
+        notes = []
+        for str_note in list_of_str_notes:
+            notes.append(Note(str_note))
+
+        return notes

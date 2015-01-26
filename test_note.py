@@ -12,7 +12,7 @@ class NoteTest(unittest.TestCase):
 
     def test_a_sharp_is_a_black_key(self):
         a_sharp_2 = note.Note('A#2')
-        print(note.Note.base_black_keys)
+
         self.assertTrue(a_sharp_2.is_a_black_key())
 
     def test_c_is_not_a_black_key(self):
@@ -38,6 +38,12 @@ class NoteTest(unittest.TestCase):
 
         self.assertIsInstance(r, note.Note)
 
+    def test_init_notes_e_1_d_sharp_2_and_f_3(self):
+        notes = note.Note.init_notes(['e1', 'd#2', 'f3'])
+
+        self.assertEqual(notes[0].pitch, note.Note('e1').pitch)
+        self.assertEqual(notes[1].pitch, note.Note('d#2').pitch)
+        self.assertEqual(notes[2].pitch, note.Note('f3').pitch)
 
 if __name__ == '__main__':
     unittest.main()
