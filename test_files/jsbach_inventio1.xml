@@ -3,7 +3,7 @@
         <bar time_signature="4/4" key="C">
             
             <unit beats="1/4">
-                <pause></pause>
+                <note hold="False" pitch="-"></note>
             </unit>
             <unit beats="1/4">
                 <note hold="False" pitch="c4"></note>
@@ -297,10 +297,10 @@
         <bar time_signature="4/4" key="C">
             
             <unit beats="1/2">
-                <note hold="False" pitch="g4"></note>
+        -   <note hold="False" pitch="g4"></note>
             </unit>
             <unit beats="7/2">
-                <pause></pause>
+                <note hold="False" pitch="-"></note>
             </unit>
 
         </bar>
