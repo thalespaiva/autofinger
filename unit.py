@@ -39,6 +39,9 @@ class Unit(object):
         return Unit(notes, Fraction(1, 2))
 
     def calculate_center(self):
-        pitches = [note.pitch for note in self.notes]
+        pitches = [note.pitch for note in self.notes if note.not_pause()]
+
+        if len(pitches) == 0:
+            return None
 
         return mean(pitches)
