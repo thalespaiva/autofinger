@@ -12,7 +12,8 @@ class Bar(object):
         self.units = units
         self.key = key
         self.time_signature = time_signature
-        self.units_centers = [unit.center for unit in self.units]
+        centers = [unit.center for unit in self.units]
+        self.units_centers = [c for c in centers if c is not None]
         self.center = mean(self.units_centers)
         self.var = var(self.units_centers)
 
