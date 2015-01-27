@@ -18,8 +18,10 @@ class Bar(object):
 
     def __str__(self):
         out = ''
-        out += ' - - - - ' + str(self.time_signature)
-        out += ' - - - - ' + str(self.key) + ' - - - -\n'
+        out += ' -- ts: ' + str(self.time_signature)
+        out += ' -- key: ' + str(self.key)
+        out += ' -- center: ' + str(self.center)
+        out += ' -- var: ' + str(self.var) + '--\n'
         for u in self.units:
             out += str(u) + '\n'
         return out
