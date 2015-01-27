@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-import unit
+from numpy import mean, var
+
+from unit import Unit
 
 
 class Bar(object):
@@ -10,6 +12,9 @@ class Bar(object):
         self.units = units
         self.key = key
         self.time_signature = time_signature
+        self.units_centers = [unit.center for unit in self.units]
+        self.center = mean(self.units_centers)
+        self.var = var(self.units_centers)
 
     def __str__(self):
         out = ''
@@ -23,6 +28,6 @@ class Bar(object):
         key = 'c major'
         time_signature = '4/4'
         n_units = 8
-        units = [unit.Unit.random_unit() for _ in range(n_units)]
+        units = [Unit.random_unit() for _ in range(n_units)]
 
         return Bar(key, time_signature, units)
