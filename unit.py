@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-import note
+from numpy import mean
+
+from note import Note
 
 
 class Unit(object):
@@ -17,8 +19,9 @@ class Unit(object):
     """
     def __init__(self, notes, duration):
         super(Unit, self).__init__()
-        self.notes = sorted(notes, key=note.Note.key_pitch)
+        self.notes = sorted(notes, key=Note.key_pitch)
         self.duration = duration
+        self.center = self.calculate_center()
 
     def __str__(self):
         out = '%6s' % str(self.duration) + " | "
@@ -31,6 +34,11 @@ class Unit(object):
         from fractions import Fraction
 
         n_notes = randrange(1, 6, 1)
-        notes = [note.Note.random_note() for _ in range(n_notes)]
+        notes = [Note.random_note() for _ in range(n_notes)]
 
         return Unit(notes, Fraction(1, 2))
+
+    def calculate_center(self):
+        pitches = [note.pitch for note in self.notes]
+
+        return mean(pitches)
