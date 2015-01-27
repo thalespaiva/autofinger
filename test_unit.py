@@ -29,13 +29,13 @@ class UnitTest(unittest.TestCase):
         notes = Note.init_notes(['c1', 'd1', 'e1'])
         unit = Unit(notes, Fraction(2, 4))
 
-        self.assertAlmostEqual(unit.center, 3)
+        self.assertAlmostEqual(unit.center, 3, delta=self.ERROR)
 
     def test_d_sharp_3_d_2_e_4_has_center_27(self):
         notes = Note.init_notes(['d#3', 'd2', 'e4'])
         unit = Unit(notes, Fraction(2, 4))
 
-        self.assertAlmostEqual(unit.center, 28)
+        self.assertAlmostEqual(unit.center, 28, delta=self.ERROR)
 
 
 if __name__ == "__main__":
