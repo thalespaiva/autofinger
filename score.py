@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as ElementTree
+from fractions import Fraction
 
 from note import Note
 from unit import Unit
@@ -29,16 +30,17 @@ class Score(object):
             bars = []
             for bar in line.findall('bar'):
                 units = []
+                time_signature = bar.get('time_signature')
                 for unit in bar.findall('unit'):
                     notes = []
                     for note in unit.findall('note'):
                         pitch = note.get('pitch')
                         hold_str = note.get('hold')
                         hold = {'True': True, 'False': False}[hold_str]
+                        print(pitch)
                         notes.append(Note(pitch, hold))
                     beats = unit.get('beats')
-                    units.append(Unit(notes, beats))
-                time_signature = bar.get('time_signature')
+                    units.append(Unit(notes, Fraction(beats)))
                 key = bar.get('key')
                 bars.append(Bar(key, time_signature, units))
             lines.append(bars)
@@ -47,3 +49,6 @@ class Score(object):
         author = score.get('author')
 
         return Score(lines, title, author)
+
+    def play(self):
+        pass
