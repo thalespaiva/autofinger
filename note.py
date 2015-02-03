@@ -28,6 +28,7 @@ class Note(object):
             self.base_note, self.octave, self.pitch = Note.get_pitch(note)
             self.note = note
             self.hold = hold
+            self.frequency = self.get_frequency()
         else:
             raise TypeError
 
@@ -48,9 +49,8 @@ class Note(object):
 
     def get_pitch(str_note):
         try:
-            if str_note == '-':
-                return 0
-
+            if '-' in str_note:
+                return ('-', '-', 0)
             str_note = str_note.lower()
 
             note_regex = r'([a-gA-G])(#{1,2}|b{1,2})?(\d+)'
@@ -94,9 +94,12 @@ class Note(object):
         return notes
 
     def get_frequency(self):
-        n = Note.number_of_base_notes
-        note = Note.base_notes[self.base_note] - 1
-        base_frequency = Note.C0frequency * 2.0**(note / n)
-        frequency = base_frequency * 2.0**self.octave
+        if self.not_pause():
+            n = Note.number_of_base_notes
+            note = Note.base_notes[self.base_note] - 1
+            base_frequency = Note.C0frequency * 2.0**(note / n)
+            frequency = base_frequency * 2.0**self.octave
 
-        return frequency
+            return frequency
+        else:
+            return 0
