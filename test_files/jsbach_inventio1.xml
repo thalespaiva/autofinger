@@ -1,7 +1,7 @@
 <score title="Inventio I" author="J. S. Bach">
     <line>
         <bar time_signature="4/4" key="C">
-            
+
             <unit beats="1/4">
                 <note hold="False" pitch="-"></note>
             </unit>
@@ -14,7 +14,7 @@
             <unit beats="1/4">
                 <note hold="False" pitch="e4"></note>
             </unit>
-            
+
             <unit beats="1/4">
                 <note hold="False" pitch="f4"></note>
             </unit>
@@ -27,14 +27,14 @@
             <unit beats="1/4">
                 <note hold="False" pitch="c4"></note>
             </unit>
-            
+
             <unit beats="1/2">
                 <note hold="False" pitch="g4"></note>
             </unit>
             <unit beats="1/2">
                 <note hold="False" pitch="c5"></note>
             </unit>
-            
+
             <unit beats="1/2">
                 <note hold="False" pitch="b4"></note>
             </unit>
@@ -44,7 +44,7 @@
 
         </bar>
         <bar time_signature="4/4" key="C">
-            
+
             <unit beats="1/4">
                 <note hold="False" pitch="d5"></note>
             </unit>
@@ -57,7 +57,7 @@
             <unit beats="1/4">
                 <note hold="False" pitch="b4"></note>
             </unit>
-            
+
             <unit beats="1/4">
                 <note hold="False" pitch="c5"></note>
             </unit>
@@ -70,14 +70,14 @@
             <unit beats="1/4">
                 <note hold="False" pitch="g4"></note>
             </unit>
-            
+
             <unit beats="1/2">
                 <note hold="False" pitch="d5"></note>
             </unit>
             <unit beats="1/2">
                 <note hold="False" pitch="g5"></note>
             </unit>
-            
+
             <unit beats="1/2">
                 <note hold="False" pitch="f5"></note>
             </unit>
@@ -87,7 +87,7 @@
 
         </bar>
         <bar time_signature="4/4" key="C">
-            
+
             <unit beats="1/4">
                 <note hold="False" pitch="e5"></note>
             </unit>
@@ -100,7 +100,7 @@
             <unit beats="1/4">
                 <note hold="False" pitch="f5"></note>
             </unit>
-            
+
             <unit beats="1/4">
                 <note hold="False" pitch="e5"></note>
             </unit>
@@ -113,7 +113,7 @@
             <unit beats="1/4">
                 <note hold="False" pitch="a5"></note>
             </unit>
-            
+
             <unit beats="1/4">
                 <note hold="False" pitch="g5"></note>
             </unit>
@@ -126,9 +126,9 @@
             <unit beats="1/4">
                 <note hold="False" pitch="d5"></note>
             </unit>
-            
+
             <unit beats="1/4">
-                <note hold="False" pitch="c4"></note>
+                <note hold="False" pitch="c5"></note>
             </unit>
             <unit beats="1/4">
                 <note hold="False" pitch="e5"></note>
@@ -142,7 +142,7 @@
 
         </bar>
         <bar time_signature="4/4" key="C">
-            
+
             <unit beats="1/4">
                 <note hold="False" pitch="e5"></note>
             </unit>
@@ -155,7 +155,7 @@
             <unit beats="1/4">
                 <note hold="False" pitch="b4"></note>
             </unit>
-            
+
             <unit beats="1/4">
                 <note hold="False" pitch="a4"></note>
             </unit>
@@ -168,7 +168,7 @@
             <unit beats="1/4">
                 <note hold="False" pitch="d5"></note>
             </unit>
-            
+
             <unit beats="1/4">
                 <note hold="False" pitch="c5"></note>
             </unit>
@@ -181,7 +181,7 @@
             <unit beats="1/4">
                 <note hold="False" pitch="g4"></note>
             </unit>
-            
+
             <unit beats="1/4">
                 <note hold="False" pitch="f#4"></note>
             </unit>
@@ -197,21 +197,21 @@
 
         </bar>
         <bar time_signature="4/4" key="C">
-            
+
             <unit beats="1/2">
                 <note hold="False" pitch="a4"></note>
             </unit>
             <unit beats="1/2">
                 <note hold="False" pitch="d4"></note>
             </unit>
-            
+
             <unit beats="3/4">
                 <note hold="False" pitch="c5"></note>
             </unit>
             <unit beats="1/4">
                 <note hold="False" pitch="d5"></note>
             </unit>
-            
+
             <unit beats="1/4">
                 <note hold="False" pitch="b4"></note>
             </unit>
@@ -240,7 +240,7 @@
 
         </bar>
         <bar time_signature="4/4" key="C">
-        
+
             <unit beats="1/4">
                 <note hold="False" pitch="g4"></note>
             </unit>
@@ -253,7 +253,7 @@
             <unit beats="1/4">
                 <note hold="False" pitch="c5"></note>
             </unit>
-        
+
             <unit beats="1/4">
                 <note hold="False" pitch="b4"></note>
             </unit>
@@ -266,7 +266,7 @@
             <unit beats="1/4">
                 <note hold="False" pitch="e5"></note>
             </unit>
-        
+
             <unit beats="1/4">
                 <note hold="False" pitch="d5"></note>
             </unit>
@@ -280,9 +280,9 @@
                 <note hold="False" pitch="d5"></note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="g4"></note>
+                <note hold="False" pitch="g5"></note>
             </unit>
-        
+
             <unit beats="1/2">
                 <note hold="False" pitch="b4"></note>
             </unit>
@@ -292,10 +292,10 @@
             <unit beats="1/4">
                 <note hold="False" pitch="g4"></note>
             </unit>
-        
+
         </bar>
         <bar time_signature="4/4" key="C">
-            
+
             <unit beats="1/2">
         -   <note hold="False" pitch="g4"></note>
             </unit>
