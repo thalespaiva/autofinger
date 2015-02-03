@@ -2,6 +2,7 @@ import re
 
 
 class Note(object):
+
     """
     pitch is one integer, where:
         0 <-> Pause
@@ -10,6 +11,8 @@ class Note(object):
         3 <-> D1
     """
 
+    base_notes_list = ['c', 'c#', 'd', 'd#', 'e',
+                       'f', 'f#', 'g', 'g#', 'a', 'a#', 'b']
     base_notes = dict([('c', 1), ('c#', 2), ('d', 3), ('d#', 4),
                        ('e', 5), ('f', 6), ('f#', 7), ('g', 8),
                        ('g#', 9), ('a', 10), ('a#', 11), ('b', 12)])
@@ -17,10 +20,12 @@ class Note(object):
     number_of_base_notes = len(base_notes)
     base_black_keys = [2, 4, 7, 9, 11]
 
+    C0frequency = 16.35159783128741
+
     def __init__(self, note, hold=False):
         super(Note, self).__init__()
         if (isinstance(note, str)):
-            self.pitch = Note.get_pitch(note)
+            self.base_note, self.octave, self.pitch = Note.get_pitch(note)
             self.note = note
             self.hold = hold
         else:
@@ -53,16 +58,19 @@ class Note(object):
 
             str_pitch = match.group(1).lower()
             modiffs = match.group(2)
-            position = int(match.group(3))
+            octave = int(match.group(3))
 
             pitch = 0
-            pitch += (position - 1)*Note.number_of_base_notes
+            pitch += (octave - 1) * Note.number_of_base_notes
             pitch += Note.base_notes[str_pitch]
             if modiffs:
                 pitch += modiffs.count('#')
                 pitch -= modiffs.count('b')
 
-            return pitch
+            index = (pitch - 1) % 12
+            base_note = Note.base_notes_list[index]
+
+            return (base_note, octave, pitch)
 
         except Exception as e:
             raise e
@@ -74,9 +82,9 @@ class Note(object):
         from random import choice
 
         pitch = choice(list(Note.base_notes.keys()))
-        position = str(choice(range(1, 9)))
+        octave = str(choice(range(1, 9)))
 
-        return Note(pitch + position)
+        return Note(pitch + octave)
 
     def init_notes(list_of_str_notes):
         notes = []
@@ -85,3 +93,10 @@ class Note(object):
 
         return notes
 
+    def get_frequency(self):
+        n = Note.number_of_base_notes
+        note = Note.base_notes[self.base_note] - 1
+        base_frequency = Note.C0frequency * 2.0**(note / n)
+        frequency = base_frequency * 2.0**self.octave
+
+        return frequency
