@@ -68,7 +68,7 @@ if __name__ == '__main__':
     from score import Score
 
     if len(sys.argv) == 1:
-        s = Score.parse('./test_files/jsbach_inventio1.xml')
+        s = Score.parse('tests/test_files/jsbach_inventio1.xml')
     else:
         s = Score.parse(sys.argv[1])
 
