@@ -15,9 +15,9 @@ class ComfortCalculator(object):
 
     DISTANCES_CROSSING = {
         (1, 2): 12, (1, 3): 9, (1, 4): 6,
-        (1, 5): 3, (2, 3): 0.6, (2, 4): 0.3,
-        (2, 5): 0, (3, 4): 0.2, (3, 5): 0,
-        (4, 5): 0,
+        (1, 5): 0.01, (2, 3): 0.01, (2, 4): 0.005,
+        (2, 5): 0.0001, (3, 4): 0.01, (3, 5): 0.0001,
+        (4, 5): 0.0001,
     }
 
     CLOSED_DISTANCE = {
@@ -43,12 +43,12 @@ class ComfortCalculator(object):
                 dist = ComfortCalculator.DISTANCES_CROSSING[key]
 
             diff = jump - dist
-            factor = jump/dist
+            factor = jump / dist
 
             if diff > 0:
                 return diff
             else:
-                return factor*ComfortCalculator.CLOSED_DISTANCE[key]
+                return factor * ComfortCalculator.CLOSED_DISTANCE[key]
 
         else:
             if finger_org > finger_dst:
@@ -57,9 +57,63 @@ class ComfortCalculator(object):
                 dist = ComfortCalculator.DISTANCES_CROSSING[key]
 
             diff = jump + dist
-            factor = jump/dist
+            factor = jump / dist
 
             if diff < 0:
                 return abs(diff)
             else:
-                return factor*ComfortCalculator.CLOSED_DISTANCE[key]
+                return factor * ComfortCalculator.CLOSED_DISTANCE[key]
+
+    def calculate_comforts(fingers_org, fingers_dst, jumps):
+        from itertools import product
+
+        keys = product(fingers_org, fingers_dst, jumps)
+        xs = []
+        ys = []
+        zs = []
+        cs = []
+
+        for key in keys:
+            o, d, j = key
+            xs.append(o)
+            ys.append(d)
+            zs.append(j)
+            cs.append(ComfortCalculator.calculate_jump_comfort(o, d, j))
+
+        return (xs, ys, zs, cs)
+
+    def plot_comfort():
+        import seaborn
+        from mpl_toolkits.mplot3d import Axes3D
+        from pylab import plt
+
+        fingers_org = [1, 2, 3, 4, 5]
+        fingers_dst = [1, 2, 3, 4, 5]
+        jumps = range(-12, +13, 1)
+
+        xs, ys, zs, cs = ComfortCalculator.calculate_comforts(
+            fingers_org, fingers_dst, jumps)
+
+        fig = plt.figure()
+        ax = fig.add_subplot(111, projection='3d')
+        ax.scatter(xs, ys, zs, c=cs)
+        ax.set_zlabel("Interval (half steps)", fontsize=15)
+        ax.set_zlim(jumps[0], jumps[-1])
+        # ax.set_zticks(jumps)
+
+        plt.xticks(fingers_org)
+        plt.xlim(fingers_org[0], fingers_org[-1])
+        plt.xlabel("From finger", fontsize=15)
+
+        plt.yticks(fingers_dst)
+        plt.ylim(fingers_dst[0], fingers_dst[-1])
+        plt.ylabel("To finger", fontsize=15)
+
+        plt.title("Difficulty of finger passages", fontsize=25)
+
+        plt.savefig('./figures/image.png', figsize=(16, 12), dpi=300)
+        # plt.show()
+
+
+if __name__ == '__main__':
+    ComfortCalculator.plot_comfort()
