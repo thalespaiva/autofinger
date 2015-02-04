@@ -6,6 +6,7 @@ from note import Note
 
 
 class Unit(object):
+
     """
     A Unit is a list of notes that the player should perform at the same time.
     (<- with one hand)
@@ -17,6 +18,7 @@ class Unit(object):
     This is the minimum unit for which one can generate a fingering with
     autofinger.
     """
+
     def __init__(self, notes, duration):
         super(Unit, self).__init__()
         self.notes = sorted(notes, key=Note.key_pitch)
