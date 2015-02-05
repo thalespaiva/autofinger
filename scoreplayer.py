@@ -21,7 +21,7 @@ class AudioPlayer(object):
         return numpy.sin(numpy.arange(length) * factor)
 
     def gen_note_array(frequency, length, rate=STD_SAMPLE_RATE):
-        array = 0*AudioPlayer.gen_sine_wave(frequency, length, rate)
+        array = 1*AudioPlayer.gen_sine_wave(frequency, length, rate)
         array += 0.4 * AudioPlayer.gen_sine_wave(2*frequency, length, rate)
         array += 0.2 * AudioPlayer.gen_sine_wave(3*frequency, length, rate)
         array += 0.1 * AudioPlayer.gen_sine_wave(4*frequency, length, rate)
