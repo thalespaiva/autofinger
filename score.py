@@ -21,6 +21,15 @@ class Score(object):
                 out += str(bar)
         return out
 
+    def get_units(self):
+        units = []
+
+        for line in self.lines:
+            for bar in line:
+                for unit in bar.units:
+                    units.append(unit)
+        return units
+
     def parse(file_path):
         tree = ElementTree.parse(file_path)
         score = tree.getroot()
