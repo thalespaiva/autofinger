@@ -26,9 +26,26 @@ CLOSED_DISTANCE = {
 
 AV_KEY_WIDTH = 1.95  # centimeters
 
+COMFORT_MEMO_TABLE = {}
+
 
 def calculate_jump_comfort(finger_org, finger_dst, jump_in_half_tones):
+    global COMFORT_MEMO_TABLE
+    try:
+        return COMFORT_MEMO_TABLE[(finger_org, finger_dst, jump_in_half_tones)]
+
+    except KeyError:
+        key = (finger_org, finger_dst, jump_in_half_tones)
+        COMFORT_MEMO_TABLE[key] = calculate_jump_comfort_real(
+            finger_org, finger_dst, jump_in_half_tones)
+        return COMFORT_MEMO_TABLE[key]
+
+def calculate_jump_comfort_real(finger_org, finger_dst, jump_in_half_tones):
     jump = jump_in_half_tones * AV_KEY_WIDTH
+
+    if (finger_org is None) or (finger_dst is None):
+        return 0
+
     key = tuple(sorted((finger_org, finger_dst)))
 
     if finger_org == finger_dst:
@@ -44,9 +61,9 @@ def calculate_jump_comfort(finger_org, finger_dst, jump_in_half_tones):
         factor = jump / dist
 
         if diff > 0:
-            return diff
+            return abs(diff)
         else:
-            return factor * CLOSED_DISTANCE[key]
+            return abs(factor * CLOSED_DISTANCE[key])
 
     else:
         if finger_org > finger_dst:
@@ -55,12 +72,12 @@ def calculate_jump_comfort(finger_org, finger_dst, jump_in_half_tones):
             dist = DISTANCES_CROSSING[key]
 
         diff = jump + dist
-        factor = jump / dist
+        factor = -jump / dist
 
         if diff < 0:
             return abs(diff)
         else:
-            return factor * CLOSED_DISTANCE[key]
+            return abs(factor * CLOSED_DISTANCE[key])
 
 
 def calculate_comforts(fingers_org, fingers_dst, jumps):
