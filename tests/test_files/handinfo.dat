@@ -1,0 +1,19 @@
+<handinfo>
+    <!-- Max intervals between consecutive fingers (normaly for chords) -->
+    <chord_comfort>
+        <interval from="1" to="2" max="" min="" />
+        <interval from="1" to="3" max="" min="" />
+        <interval from="1" to="4" max="" min="" />
+        <interval from="1" to="5" max="" min="" />
+        <interval from="2" to="3" max="" min="" />
+        <interval from="2" to="4" max="" min="" />
+        <interval from="2" to="5" max="" min="" />
+        <interval from="3" to="4" max="" min="" />
+        <interval from="3" to="5" max="" min="" />
+        <interval from="4" to="5" max="" min="" />
+    </chord_comfort>
+    
+
+
+
+</handinfo>

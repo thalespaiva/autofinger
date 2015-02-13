@@ -1,306 +1,308 @@
-<score title="Inventio I" author="J. S. Bach">
+<score>
+    <title>Inventio I</title>
+    <author>Bach</author>
     <line>
         <bar time_signature="4/4" key="C">
-
+            
             <unit beats="1/4">
-                <note hold="False" pitch="-"></note>
+                <pause></pause>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="c4"></note>
+                <note hold="False">c4</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="d4"></note>
+                <note hold="False">d4</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="e4"></note>
+                <note hold="False">e4</note>
             </unit>
-
+            
             <unit beats="1/4">
-                <note hold="False" pitch="f4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="d4"></note>
+                <note hold="False">f4</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="e4"></note>
+                <note hold="False">d4</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="c4"></note>
+                <note hold="False">e4</note>
             </unit>
-
+            <unit beats="1/4">
+                <note hold="False">c4</note>
+            </unit>
+            
             <unit beats="1/2">
-                <note hold="False" pitch="g4"></note>
-            </unit>
-            <unit beats="1/2">
-                <note hold="False" pitch="c5"></note>
-            </unit>
-
-            <unit beats="1/2">
-                <note hold="False" pitch="b4"></note>
+                <note hold="False">g4</note>
             </unit>
             <unit beats="1/2">
-                <note hold="False" pitch="c5"></note>
+                <note hold="False">c5</note>
+            </unit>
+            
+            <unit beats="1/2">
+                <note hold="False">b4</note>
+            </unit>
+            <unit beats="1/2">
+                <note hold="False">c5</note>
             </unit>
 
         </bar>
         <bar time_signature="4/4" key="C">
-
+            
             <unit beats="1/4">
-                <note hold="False" pitch="d5"></note>
+                <note hold="False">d5</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="g4"></note>
+                <note hold="False">g4</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="a4"></note>
+                <note hold="False">a4</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="b4"></note>
+                <note hold="False">b4</note>
             </unit>
-
+            
             <unit beats="1/4">
-                <note hold="False" pitch="c5"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="a4"></note>
+                <note hold="False">c5</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="b4"></note>
+                <note hold="False">a4</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="g4"></note>
+                <note hold="False">b4</note>
             </unit>
-
+            <unit beats="1/4">
+                <note hold="False">g4</note>
+            </unit>
+            
             <unit beats="1/2">
-                <note hold="False" pitch="d5"></note>
-            </unit>
-            <unit beats="1/2">
-                <note hold="False" pitch="g5"></note>
-            </unit>
-
-            <unit beats="1/2">
-                <note hold="False" pitch="f5"></note>
+                <note hold="False">d5</note>
             </unit>
             <unit beats="1/2">
-                <note hold="False" pitch="g5"></note>
+                <note hold="False">g5</note>
+            </unit>
+            
+            <unit beats="1/2">
+                <note hold="False">f5</note>
+            </unit>
+            <unit beats="1/2">
+                <note hold="False">g5</note>
             </unit>
 
         </bar>
         <bar time_signature="4/4" key="C">
-
+            
             <unit beats="1/4">
-                <note hold="False" pitch="e5"></note>
+                <note hold="False">e5</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="a5"></note>
+                <note hold="False">a5</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="g5"></note>
+                <note hold="False">g5</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="f5"></note>
+                <note hold="False">f5</note>
             </unit>
-
+            
             <unit beats="1/4">
-                <note hold="False" pitch="e5"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="g5"></note>
+                <note hold="False">e5</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="f5"></note>
+                <note hold="False">g5</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="a5"></note>
-            </unit>
-
-            <unit beats="1/4">
-                <note hold="False" pitch="g5"></note>
+                <note hold="False">f5</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="f5"></note>
+                <note hold="False">a5</note>
+            </unit>
+            
+            <unit beats="1/4">
+                <note hold="False">g5</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="e5"></note>
+                <note hold="False">f5</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="d5"></note>
-            </unit>
-
-            <unit beats="1/4">
-                <note hold="False" pitch="c5"></note>
+                <note hold="False">e5</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="e5"></note>
+                <note hold="False">d5</note>
+            </unit>
+            
+            <unit beats="1/4">
+                <note hold="False">c4</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="d5"></note>
+                <note hold="False">e5</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="f5"></note>
-            </unit>
-
-        </bar>
-        <bar time_signature="4/4" key="C">
-
-            <unit beats="1/4">
-                <note hold="False" pitch="e5"></note>
+                <note hold="False">d5</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="d5"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="c5"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="b4"></note>
-            </unit>
-
-            <unit beats="1/4">
-                <note hold="False" pitch="a4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="c5"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="b4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="d5"></note>
-            </unit>
-
-            <unit beats="1/4">
-                <note hold="False" pitch="c5"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="b4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="a4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="g4"></note>
-            </unit>
-
-            <unit beats="1/4">
-                <note hold="False" pitch="f#4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="a4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="g4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="b4"></note>
+                <note hold="False">f5</note>
             </unit>
 
         </bar>
         <bar time_signature="4/4" key="C">
+            
+            <unit beats="1/4">
+                <note hold="False">e5</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">d5</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">c5</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">b4</note>
+            </unit>
+            
+            <unit beats="1/4">
+                <note hold="False">a4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">c5</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">b4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">d5</note>
+            </unit>
+            
+            <unit beats="1/4">
+                <note hold="False">c5</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">b4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">a4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">g4</note>
+            </unit>
+            
+            <unit beats="1/4">
+                <note hold="False">f#4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">a4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">g4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">b4</note>
+            </unit>
 
+        </bar>
+        <bar time_signature="4/4" key="C">
+            
             <unit beats="1/2">
-                <note hold="False" pitch="a4"></note>
+                <note hold="False">a4</note>
             </unit>
             <unit beats="1/2">
-                <note hold="False" pitch="d4"></note>
+                <note hold="False">d4</note>
             </unit>
-
+            
             <unit beats="3/4">
-                <note hold="False" pitch="c5"></note>
+                <note hold="False">c5</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="d5"></note>
+                <note hold="False">d5</note>
+            </unit>
+            
+            <unit beats="1/4">
+                <note hold="False">b4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">a4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">g4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">f#4</note>
             </unit>
 
             <unit beats="1/4">
-                <note hold="False" pitch="b4"></note>
+                <note hold="False">e4</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="a4"></note>
+                <note hold="False">g4</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="g4"></note>
+                <note hold="False">f#4</note>
             </unit>
             <unit beats="1/4">
-                <note hold="False" pitch="f#4"></note>
-            </unit>
-
-            <unit beats="1/4">
-                <note hold="False" pitch="e4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="g4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="f#4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="a4"></note>
-            </unit>
-
-        </bar>
-        <bar time_signature="4/4" key="C">
-
-            <unit beats="1/4">
-                <note hold="False" pitch="g4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="b4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="a4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="c5"></note>
-            </unit>
-
-            <unit beats="1/4">
-                <note hold="False" pitch="b4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="d5"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="c5"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="e5"></note>
-            </unit>
-
-            <unit beats="1/4">
-                <note hold="False" pitch="d5"></note>
-            </unit>
-            <unit beats="1/8">
-                <note hold="False" pitch="b4"></note>
-            </unit>
-            <unit beats="1/8">
-                <note hold="False" pitch="c5"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="d5"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="g5"></note>
-            </unit>
-
-            <unit beats="1/2">
-                <note hold="False" pitch="b4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="a4"></note>
-            </unit>
-            <unit beats="1/4">
-                <note hold="False" pitch="g4"></note>
+                <note hold="False">a4</note>
             </unit>
 
         </bar>
         <bar time_signature="4/4" key="C">
-
+        
+            <unit beats="1/4">
+                <note hold="False">g4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">b4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">a4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">c5</note>
+            </unit>
+        
+            <unit beats="1/4">
+                <note hold="False">b4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">d5</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">c5</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">e5</note>
+            </unit>
+        
+            <unit beats="1/4">
+                <note hold="False">d5</note>
+            </unit>
+            <unit beats="1/8">
+                <note hold="False">b4</note>
+            </unit>
+            <unit beats="1/8">
+                <note hold="False">c5</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">d5</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">g4</note>
+            </unit>
+        
             <unit beats="1/2">
-            <note hold="False" pitch="g4"></note>
+                <note hold="False">b4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">a4</note>
+            </unit>
+            <unit beats="1/4">
+                <note hold="False">g4</note>
+            </unit>
+        
+        </bar>
+        <bar time_signature="4/4" key="C">
+            
+            <unit beats="1/2">
+                <note hold="False">g4</note>
             </unit>
             <unit beats="7/2">
-                <note hold="False" pitch="-"></note>
+                <note hold="False">b4</note>
             </unit>
 
         </bar>
