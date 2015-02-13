@@ -22,6 +22,18 @@ class Autofingerer(object):
         self.score = score
         self.units = score.get_units()
 
+    def weighted_choice(self, choices, weights):
+        total = sum([weights[i - 1] for i in choices])
+        adj_weights = [weights[i - 1] / total for i in choices]
+
+        r = random.random()
+        m = adj_weights[0]
+        for i in range(len(choices) - 1):
+            if r <= m:
+                return choices[i]
+            m += adj_weights[i + 1]
+        return choices[-1]
+
     def fitness(self, fingering):
         fitness = 0
         finger_org = fingering[0]
@@ -33,16 +45,32 @@ class Autofingerer(object):
             if finger_org is None or finger_dst is None:
                 pass
             else:
-                p = comfort.calculate_jump_comfort(
+                fitness += comfort.calculate_jump_comfort(
                     finger_org, finger_dst, jump)
-                fitness += p
-                if (p < 0):
-                    print("EEEEPA: " + str(p) + "j = " + str(jump))
             finger_org = finger_dst
         return fitness
 
     def gen_random_finger(self, available_fingers, note, bar):
-        return choice(available_fingers)
+        diff = abs(note.pitch - bar.center)
+        sd = sqrt(bar.var)
+
+        if diff > 2 * sd:
+            if note.pitch < bar.center:
+                return self.weighted_choice(available_fingers,
+                                            self.base_weights_2sd_lo)
+            else:
+                return self.weighted_choice(available_fingers,
+                                            self.base_weights_2sd_hi)
+        if diff > 1 * sd:
+            if note.pitch < bar.center:
+                return self.weighted_choice(available_fingers,
+                                            self.base_weights_1sd_lo)
+            else:
+                return self.weighted_choice(available_fingers,
+                                            self.base_weights_1sd_hi)
+        else:
+            return self.weighted_choice(available_fingers,
+                                        self.base_weights_med)
 
     def gen_random_fingering(self, unit, bar):
 
@@ -100,13 +128,13 @@ class Autofingerer(object):
         return descendents
 
     def mutate_subject(self, subject):
-        for i in range(len(subject)):
-            if random.random() <= 0.01:
-                subject[i] = choice(self.all_fingers)
+        mut_genes = random.sample(range(len(subject)), int(len(subject)*0.05))
+        for i in mut_genes:
+            subject[i] = choice(self.all_fingers)
         return subject
 
     def mutate_population(self, population):
-        for sbj in random.sample(population, 30):
+        for sbj in random.sample(population, 20):
             new = self.mutate_subject(sbj[1].copy())
             population.append((self.fitness(new), new))
 
@@ -116,11 +144,12 @@ class Autofingerer(object):
         for i in range(n_iterations):
             parents = self.selection(population)
             descendents = self.generate_descendents(parents)
+            population = population[0:population_size]
             population += descendents
             if best[0] > parents[0][0]:
                 best = parents[0]
             self.mutate_population(population)
-        return [best]
+        return [best, self.selection(population)]
 
 if __name__ == "__main__":
     from score import Score
