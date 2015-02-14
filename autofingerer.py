@@ -149,10 +149,11 @@ class Autofingerer(object):
             if best[0] > parents[0][0]:
                 best = parents[0]
             self.mutate_population(population)
-        return [best, self.selection(population)]
+
+        return best[1]
 
 if __name__ == "__main__":
     from score import Score
-    s = Score.parse('./tests/test_files/jsbach_inventio1.xml')
+    s = Score.parse('./tests/auxfiles/jsbach_inventio1.xml')
     a = Autofingerer(s)
     #p = a.generate_base_population()
